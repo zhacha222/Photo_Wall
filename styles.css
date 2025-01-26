@@ -249,3 +249,23 @@ body::before {
     opacity: 0.3;
     pointer-events: none;
 }
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    font: 16px 'Montserrat', sans-serif;
+    color: #9b9b9b;
+    justify-content: center;
+    text-align: center;
+    font-size: 14px;
+}
+
+.container a {
+    color: #9b9b9b;
+    text-decoration: underline;
+}
+
+.container a:hover {
+    color: #2b2b2b;
+}
