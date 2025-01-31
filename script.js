@@ -55,6 +55,21 @@ function loadThumbnail(index) {
         thumbImg.src = `images/thumbs/${index}.jpg`;
 
         thumbImg.onload = function () {
+            createImageElement(thumbImg, index, resolve);
+        };
+
+        // If the thumbnail image fails to load, try loading the full-size image
+        thumbImg.onerror = function () {
+            thumbImg.src = `images/${index}.jpg`;
+            thumbImg.onload = function () {
+                createImageElement(thumbImg, index, resolve);
+            };
+            thumbImg.onerror = function () {
+                resolve(null);
+            };
+        };
+
+        function createImageElement(thumbImg, index, resolve) {
             const imgElement = document.createElement('img');
             imgElement.dataset.large = `images/${index}.jpg`;
             imgElement.src = thumbImg.src;
@@ -85,11 +100,7 @@ function loadThumbnail(index) {
             imgElement.classList.add('thumbnail');
 
             resolve(imgElement);
-        };
-
-        thumbImg.onerror = function () {
-            resolve(null);
-        };
+        }
     });
 }
 
