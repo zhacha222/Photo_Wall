@@ -4,5 +4,6 @@
 This readme is writen in both English and Chinese.
 
 <p align="center">
-    <img src="images/display/GIF_1.gif" alt="GIF" width="80%"/>
+    <img src="readme_img/GIF_1.gif" alt="GIF" width="80%"/>
 </p>
+
