@@ -25,7 +25,7 @@ def get_exif_datetime(file_path):
     return None
 
 # Rename images in the 'images' folder based on the order of their creation date
-def rename_images():
+def rename_images(order_asc=False):
     folder_path = 'images'
     if not os.path.exists(folder_path):
         os.makedirs(folder_path)
@@ -54,7 +54,7 @@ def rename_images():
         else:
             images_without_dates.append(filename)
 
-    images_with_dates.sort(key=lambda x: x[1], reverse=True)
+    images_with_dates.sort(key=lambda x: x[1], reverse=not order_asc)
 
     temp_filenames = []
     index = 0
@@ -85,4 +85,5 @@ def rename_images():
     print("Renaming completed!")
 
 if __name__ == "__main__":
-    rename_images()
+    order_asc = False
+    rename_images(order_asc)

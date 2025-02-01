@@ -3,6 +3,7 @@ let index = 0;
 let loading = false;
 const batchSize = 10; // The number of images loaded per batch
 const initialBatchCount = 5; // The number of batches initially loaded
+const scrolldistance = 1000; // The distance from the bottom of the page to start loading more images
 let currentImageIndex = 0;
 let loadedImages = [];
 let leftArrow;
@@ -165,7 +166,7 @@ function handleScroll() {
     const windowHeight = window.innerHeight;
     const documentHeight = document.documentElement.scrollHeight;
 
-    if (scrollTop + windowHeight >= documentHeight - 1000) {
+    if (scrollTop + windowHeight >= documentHeight - scrolldistance) {
         loadImages();
     }
 }
