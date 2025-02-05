@@ -1,6 +1,8 @@
 # Photo_Wall
 恋爱照片墙网站模板，Love photo wall website template
 
+## Introduction
+
 **English Introduction:**
 
 This is a website template that you can store your love story photos, and you can give it as a gift to your lover, or share your love story with more people. You can click [here](https://siyuanli.tech/Photo_Wall/) to see the website demo. With this template, you can make your own website in less than 10 minutes.
@@ -17,7 +19,38 @@ Following I will introduce the features of the website and how to create your ow
 
 接下来，我将介绍网站的主要功能，以及如何从零开始创建你的专属爱情故事网站，包括 **英文和中文** 。
 
+## Features:
+
+1. **爱心轨迹**：鼠标移动时，会有爱心轨迹。同时界面底部也会始终浮出颜色更淡的爱心图案，增加浪漫氛围。 
+
 <p align="center">
     <img src="readme_img/GIF_1.gif" alt="GIF" width="80%"/>
 </p>
 
+2. **点击大图** ：点击照片后，可以查看大图，方便查看细节，并且会显示拍摄时间（如果照片信息中包含）。也可以点击esc键或者点击X号关闭大图。（加载速度受网络影响较大）
+
+3. **切换图片** ：点击左右箭头或者键盘上下左右键可以切换图片，方便查看前后照片。
+
+<p align="center">
+    <img src="readme_img/GIF_2.gif" alt="GIF" width="80%"/>
+</p>
+
+4. **图片顺序**：在预处理时，所有的图片都会按照拍摄时间倒叙（默认）排列，最新的照片会显示在最前面。也可以自定义展示顺序。实现方式在技术细节部分。
+
+5. **手机支持**：网站支持手机端访问，可以在手机上查看照片。
+
+<p align="center">
+    <img src="readme_img/GIF_3.gif" alt="GIF" width="30%"/>
+</p>
+
+## Technical Details:
+
+1. **分批加载** ：照片采用分批加载的方式，每次加载 `10` 张，避免一张一张加载导致加载速度缓慢，也避免大批量加载导致刷新过慢。
+2. **滚动加载** ：当滚动到距离页面底部 `1000px` 时，自动加载下一批照片。
+3. **首次加载** ：首次加载时，加载 `5` 批照片，后续再根据滚动加载规则加载。
+4. **缩略图** ：每张照片都有对应的缩略图，点击缩略图后再加载大图，节省加载时间和网络带宽占用。（如果某张图片没有缩略图，会自动加载原图）
+5. **图片顺序** ：`step1_rename.py`中通过读取图片的 `exif` 信息，获取拍摄时间，然后按照拍摄时间排列。如果图片没有 `exif` 信息，会按照文件名排列。在网页展示时只会根据文件名进行顺序读取，因此也可以自行以其他规则命名文件。此外，本文件还将所有其他类型图片都转成jpg格式保存。
+- P.S. 技术细节中的所有的数字都可以在 `script.js` 中根据需要进行修改。
+
+
+图标来自[favicon.io](https://favicon.io/)
