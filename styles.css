@@ -164,16 +164,21 @@ main {
     text-align: center;
     color: #fff;
     font-size: 24px;
-    margin-top: 3%;
+    margin-top: 2.5%;
 }
 
 #popupImg {
     max-width: 80%;
     max-height: 80%;
-    margin: 3% auto 0 auto;
+    margin: 1% auto 0 auto;
     display: block;
     border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
+
 
 #closeBtn {
     position: absolute;
@@ -185,7 +190,7 @@ main {
 }
 
 #closeBtn:hover {
-    color: #ccc;
+    color: #ffffff75;
 }
 
 @keyframes fadeInUp {
@@ -242,7 +247,7 @@ body::before {
 }
 
 .arrow:hover {
-    color: gray;
+    color: rgba(255, 255, 255, 1);
 }
 
 .arrow.disabled {
