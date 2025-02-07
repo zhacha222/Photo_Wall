@@ -1,5 +1,5 @@
 # Photo_Wall
-恋爱照片墙网站模板，Love photo wall website template
+恋爱照片墙网站模板，情人节礼物/纪念日礼物/生日礼物，Love photo wall website template, Valentine's Day gift/Anniversary gift/Birthday gift
 
 **English:**
 
@@ -18,6 +18,8 @@ Following I will introduce the features of the website and how to create your ow
 该网站基于 HTML、CSS 和 JavaScript 开发，具备响应式设计，无论在桌面端还是移动端都能流畅运行。你可以自由 fork 这个仓库，并根据自己的需求进行个性化修改。如果你正在寻找一个简单又优雅的方式来展示你的爱情故事，这个模板将是一个完美的起点。
 
 接下来，我将介绍网站的主要功能，以及如何从零开始创建你的专属爱情故事网站，包括 **英文和中文** 。
+
+你可以在[这个网址](https://blog.csdn.net/m0_61718615/article/details/145495675)访问到极其详细的带图中文介绍。
 
 [点击此处直接跳转至中文介绍。](#如何使用)
 
@@ -50,7 +52,7 @@ It's very easy to use this template to create your own website. Just follow the 
 
 ### Features:
 
-1. **Heart Trail**: When you move the mouse, a heart trail will appear. At the same time, a lighter heart pattern will always float at the bottom of the interface, adding a romantic atmosphere while preventing the color from being too bright and tacky.
+1. **Heart Trail**: When you move the mouse, a heart trail will appear. At the same time, a lighter heart pattern will always float at the bottom of the interface, adding a romantic atmosphere while preventing the color from being too bright and tacky. If you still think this feature is too tacky, you can delete `<script src="hearts.js"></script>` in `index.html`.
 
 <p align="center">
     <img src="readme_img/GIF_1.gif" alt="GIF" width="80%" max-width="2000px"/>
@@ -71,6 +73,8 @@ It's very easy to use this template to create your own website. Just follow the 
 <p align="center">
     <img src="readme_img/GIF_3.gif" alt="GIF" width="30%" max-width="750px"/>
 </p>
+
+6. **Automatically Calculate Love Days**: After setting the anniversary date, the website will automatically calculate the number of days you've been together, without the need for manual input.
 
 ### Technical Details:
 
@@ -115,7 +119,7 @@ It's very easy to use this template to create your own website. Just follow the 
 
 ### 功能展示:
 
-1. **爱心轨迹**：鼠标移动时，会有爱心轨迹。同时界面底部也会始终浮出颜色更淡的爱心图案，增加浪漫氛围的同时避免颜色太鲜艳导致俗气。 
+1. **爱心轨迹**：鼠标移动时，会有爱心轨迹。同时界面底部也会始终浮出颜色更淡的爱心图案，增加浪漫氛围的同时避免颜色太鲜艳导致俗气。 如果你仍然认为这个功能太俗气，可以在 `index.html` 中删除掉 `<script src="hearts.js"></script>` 这一句。
 
 <p align="center">
     <img src="readme_img/GIF_1.gif" alt="GIF" width="80%" max-width="2000px"/>
@@ -136,6 +140,8 @@ It's very easy to use this template to create your own website. Just follow the 
 <p align="center">
     <img src="readme_img/GIF_3.gif" alt="GIF" width="30%" max-width="750px"/>
 </p>
+
+6. **自动计算相恋天数**：设置好纪念日后，网页会自动计算相恋天数，无需手动输入。
 
 ### 技术细节:
 
