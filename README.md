@@ -58,7 +58,7 @@ It's very easy to use this template to create your own website. Just follow the 
     <img src="readme_img/GIF_1.gif" alt="GIF" width="80%" max-width="2000px"/>
 </p>
 
-2. **Click to View Large Image**: After clicking a photo, you can view the large image, making it easier to see the details. The shooting time will also be displayed (if included in the photo's metadata). You can also press the `esc` key or click the X to close the large image. (Loading speed is largely affected by network conditions.)
+2. **Click to View Large Image**: After clicking a photo, you can view the large image, making it easier to see the details. The shooting time will also be displayed (if included in the photo's exif infomation). You can also press the `esc` key or click the X to close the large image. (Loading speed is largely affected by network conditions.)
 
 3. **Switch Images**: You can switch images by clicking the left and right arrows or using the arrow keys on your keyboard, making it easier to view the previous and next photos.
 
