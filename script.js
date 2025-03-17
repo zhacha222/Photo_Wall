@@ -83,7 +83,7 @@ function loadThumbnail(index) {
                 if (exifDate) {
                     exifDate = exifDate.replace(/^(\d{4}):(\d{2}):(\d{2}).*$/, '$1.$2.$3');
                 } else {
-                    exifDate = 'Unknown date';
+                    exifDate = '';
                 }
                 imgElement.setAttribute('data-date', exifDate);
 
